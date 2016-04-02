@@ -13,6 +13,7 @@ angular.module('shortly.services', [])
       if (resp.data) {
         links = resp.data;  
       }
+      console.log(resp.status);
       return resp.data;
     });
   };
