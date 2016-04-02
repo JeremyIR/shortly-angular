@@ -1,4 +1,4 @@
-angular.module('shortly.links', [])
+angular.module('shortly.links', ['ngRoute'])
 
 .controller('LinksController', function ($scope, Links) {
   // Your code here
