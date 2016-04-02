@@ -10,13 +10,8 @@ angular.module('shortly.services', [])
       data: links
     })
     .then(function(resp) {
-      console.log('GET request was successful!');
-      console.log('REsp data-----', resp.data);
       if (resp.data) {
         links = resp.data;  
-        // if (callback) {
-        //   callback(resp.data);
-        // }
       }
       return resp.data;
     });
@@ -39,14 +34,6 @@ angular.module('shortly.services', [])
     addOne: addOne,
     links: links
   };
-  // return {
-  //   getAll: function () {
-  //     return $http({method: 'GET', url: 'api/links'});
-  //   },
-  //   addOne: function(link) {
-  //     return $http({method: 'POST', url: 'api/links', data: link});
-  //   }
-  // };
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
@@ -87,7 +74,6 @@ angular.module('shortly.services', [])
     $window.localStorage.removeItem('com.shortly');
     $location.path('/signin');
   };
-
 
   return {
     signin: signin,
