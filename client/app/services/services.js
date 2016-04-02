@@ -3,7 +3,7 @@ angular.module('shortly.services', [])
 .factory('Links', function ($http) {
   // Your code here
   var links = [];
-  var getAll = function (callback) {
+  var getAll = function () {
     return $http({
       method: 'GET', 
       url: '/api/links',
@@ -14,9 +14,9 @@ angular.module('shortly.services', [])
       console.log('REsp data-----', resp.data);
       if (resp.data) {
         links = resp.data;  
-        if (callback) {
-          callback(resp.data);
-        }
+        // if (callback) {
+        //   callback(resp.data);
+        // }
       }
       return resp.data;
     });
