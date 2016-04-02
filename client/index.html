@@ -7,7 +7,16 @@
   </head>
   <body>
     <h1>Shortly</h1>
-
+    <section class="navigation">
+      <ul>
+        <li ng-class="{ selected: tab === 1 }"> 
+          <a href="#/links" ng-click="tab = 1">Links</a> 
+        </li>
+        <li ng-class="{ selected: tab === 2 }"> 
+          <a href="#/shorten" ng-click="tab = 2">Shorten</a> 
+          </li>
+      </ul>
+    </section>
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
     <div ng-view></div>
 
