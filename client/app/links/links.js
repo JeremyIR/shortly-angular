@@ -4,13 +4,15 @@ angular.module('shortly.links', ['ngRoute'])
   // Your code here
 
   $scope.data = {};
-  Links.getAll().then( function (links) {
+  Links.getAll()
+  .then(function (links) {
     $scope.data.links = links;
     return links;
   });
 
   $scope.addOne = function () {
-    Links.addOne($scope.link).then(function(data) {
+    Links.addOne($scope.link)
+    .then(function(data) {
 
     })
     .catch(function (error) {

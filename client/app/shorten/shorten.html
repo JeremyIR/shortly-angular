@@ -1,6 +1,15 @@
 <div id='container'>
 <!-- Your code here -->
-  <h1>Hello Shorten</h1>
+  <div class="creator">
+    <form name="userForm" ng-submit="addLink()" novalidate>
+      <div ng-class="{ 'has-error' : userForm.url.$invalid }">
+        <input type="url" value="Submit" name="url" placeholder="type an url" ng-model="user.url">
+        <span style="color:red" ng-show="userForm.url.$error.url">
+          Sorry Not a Valid URL, Don't Forget to Use http://</span>
+      </div>
+      <button type="Submit" value="Shorten" ng-disabled="userForm.$invalid">add</button>
+    </form>
+  </div>
 </div>
 
 
