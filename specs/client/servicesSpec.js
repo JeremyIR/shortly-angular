@@ -22,6 +22,7 @@ describe('Services', function () {
     });
 
     it('should have a method `getAll`', function () {
+      console.log('Links-----', Links.getAll());
       expect(Links.getAll).to.be.a('function');
     });
 
