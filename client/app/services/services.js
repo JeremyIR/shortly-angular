@@ -5,13 +5,12 @@ angular.module('shortly.services', [])
   var links = [];
   var getAll = function () {
     return $http({
-      method: 'GET', 
+      method: 'GET',
       url: '/api/links',
-      data: links
     })
     .then(function(resp) {
       if (resp.data) {
-        links = resp.data;  
+        links = resp.data;
       }
       console.log(resp.status);
       return resp.data;
@@ -20,7 +19,7 @@ angular.module('shortly.services', [])
 
   var addOne = function(link) {
     return $http({
-      method: 'POST', 
+      method: 'POST',
       url: '/api/links',
       data: link
     })
