@@ -1,24 +1,17 @@
 <div id='container'>
-<!-- Your code here -->
-  <div class="creator">
-    <form name="shortlyForm" ng-submit="addLink()" novalidate>
-        <input name = 'link' type="url"
-        ng-model="link.url"
-        placeholder="type an url" required
-        ng-class="{ 'has-error' : shortlyForm.url.$invalid }">
-
-        <button type="Submit" value="Shorten" ng-disabled="shortlyForm.$invalid">
-        add
-        </button>
-       </form>
-    <div ng-if='shortlyForm.link.$error.required && shortlyForm.$invalid' class="message">
-      <h2>Url required</h2>
+    <!-- Your code here -->
+    <div class="creator">
+        <form name="shortlyForm" ng-submit="addLink()" novalidate>
+            <input name='link' type="url" ng-model="link.url" placeholder="type an url" required ng-class="{ 'has-error' : shortlyForm.url.$invalid }">
+            <button type="Submit" value="Shorten" ng-disabled="shortlyForm.$invalid">
+                add
+            </button>
+        </form>
+        <div ng-if='shortlyForm.link.$error.required && shortlyForm.$invalid' class="message">
+            <h2>Url required</h2>
+        </div>
+        <div ng-show='shortlyForm.link.$error.url && shortlyForm.$invalid' class="message">
+            <h2>Not a valid url</h2>
+        </div>
     </div>
-    <div ng-show='shortlyForm.link.$error.url && shortlyForm.$invalid' class="message">
-      <h2>Not a valid url</h2>
-    </div>
-  </div>
-  </div>
-
-
-
+</div>

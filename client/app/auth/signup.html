@@ -1,17 +1,17 @@
 <div id='signup'>
-  <h1>signup</h1>
-  <form name="signupForm" ng-submit='signup()'>
-  <div required ng-class="{ 'has-error' : signupForm.username.$invalid }">
-    <input type='text' name="username" ng-model='user.username' required ng-pattern="/^[a-zA-Z0-9]{4,10}$/">
-    <span style="color:red" ng-show="signupForm.username.$error.pattern">
+    <h1>signup</h1>
+    <form name="signupForm" ng-submit='signup()'>
+        <div required ng-class="{ 'has-error' : signupForm.username.$invalid }">
+            <input type='text' name="username" ng-model='user.username' required ng-pattern="/^[a-zA-Z0-9]{4,10}$/">
+            <span style="color:red" ng-show="signupForm.username.$error.pattern">
         Sorry Not a Valid username</span>
-  </div>
-  <div required ng-class="{ 'has-error' : signupForm.username.$invalid }">
-    <input type="password" name="password" ng-model='user.password' required ng-minlength=4>
-    <span style="color:red" ng-show="signupForm.password.$error.minlength">
+        </div>
+        <div required ng-class="{ 'has-error' : signupForm.username.$invalid }">
+            <input type="password" name="password" ng-model='user.password' required ng-minlength=4>
+            <span style="color:red" ng-show="signupForm.password.$error.minlength">
         Sorry Not a Valid password</span>
-  </div>
-    <button>signup</button>
-  </form>
-  <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
+        </div>
+        <button>signup</button>
+    </form>
+    <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
 </div>
